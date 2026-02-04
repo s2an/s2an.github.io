@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Project Example 1</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>C Project Example 1</h1>
+  
+  <!-- Div to load the partial -->
+  <div id="terminal"></div>
+
+  <script>
+    // Fetch the partial and inject it into the page
+    fetch("../emscripten_partial.html")  // Path to the partial
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("terminal").innerHTML = html;
+
+        // Dynamically load the specific compiled JS for the current project
+        const scriptTag = document.createElement("script");
+        scriptTag.src = "./hello_world.js";  // Path to the generated JS file
+        document.body.appendChild(scriptTag);
+      });
+  </script>
+</body>
+</html>

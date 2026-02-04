@@ -1,0 +1,29 @@
+/* Make the whole page centered and the "X" button prominent */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.welcome-container {
+  text-align: center;
+}
+
+.close-btn {
+  font-size: 48px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+}

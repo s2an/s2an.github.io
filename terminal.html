@@ -1,0 +1,13 @@
+<!-- Terminal.js A javascript terminal simulator?? -->
+
+<script src="https://terminal.jcubic.pl/js/jquery.terminal.min.js"></script>
+<div id="terminal"></div>
+<script>
+    $('#terminal').terminal(function(command) {
+        if (command == 'run example1') {
+            this.echo('Running Example 1: Output...');
+        } else {
+            this.echo('Unknown command: ' + command);
+        }
+    });
+</script>
